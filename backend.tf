@@ -3,7 +3,7 @@ terraform {
     organization = "opensource-construction"
 
     workspaces {
-      name = "osc-workspace"
+      name = "osc-tfe"
     }
   }
 }
