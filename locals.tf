@@ -21,7 +21,7 @@ locals {
 
     "osc-cloudflare-dns" = {
       description         = "os.c cloudflare dns automation workspace"
-      execution_mode      = "local"
+      execution_mode      = "remote"
       project_id          = module.project["osc-project"].id
       vcs_repo_identifier = "${var.github_organization_name}/osc-terraform-cloudflare-dns"
     }
