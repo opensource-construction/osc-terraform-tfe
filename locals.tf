@@ -9,7 +9,14 @@ locals {
       description         = "os.c terraform automation workspace"
       execution_mode      = "remote"
       project_id          = module.project["osc-project"].id
-      vcs_repo_identifier = "opensource-construction/osc-terraform-tfe"
+      vcs_repo_identifier = "${var.github_organization_name}/osc-terraform-tfe"
+    }
+
+    "osc-github" = {
+      description         = "os.c github automation workspace"
+      execution_mode      = "local"
+      project_id          = module.project["osc-project"].id
+      vcs_repo_identifier = "${var.github_organization_name}/osc-terraform-github"
     }
   }
 }
